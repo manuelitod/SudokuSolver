@@ -13,7 +13,8 @@ def create_soduku_instance(soduku_string):
 
 # Dado un archivo soduku se crea una lista
 # de instancias de sodoku
-def create_soduku_array_instances(soduku_file):
+def create_soduku_array_instances(soduku_filename):
+	soduku_file = open(soduku_filename, 'r')
 	soduku_array_instances = []
 	for soduku_line in soduku_file:
 		# To-do Checkear si la linea es valida

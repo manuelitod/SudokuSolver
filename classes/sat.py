@@ -13,6 +13,9 @@ class Sat:
 
 	def set_clauses(self, clauses):
 		self.clauses = clauses.copy()
+	
+	def set_assignment(self, assignment):
+		self.assignment = assignment.copy()
 
 	# Método que retorna las cláusulas que no poseen literales puros en el caso del método pure_literal
 	# En el caso de unit_propagation retorna una lista con las cláusulas modificadas.
@@ -93,8 +96,8 @@ class Sat:
 
 		exec_time = (time.time() - self.start_time)
 
-		# Revisamos si la búsqueda por la solución ha durado más de 120 segundos
-		if (exec_time > 120):
+		# Revisamos si la búsqueda por la solución ha durado más de 300 segundos
+		if (exec_time > 300):
 			solution = ['time out']
 			self.solution = solution
 			return solution
@@ -116,7 +119,6 @@ class Sat:
 
 		output_file_name = self.file_name.split('/')[-1]
 		fd = open('sol_' + output_file_name, 'a')
-
 		self.start_time = time.time()
 		self.solve(self.clauses, [])
 
@@ -128,8 +130,6 @@ class Sat:
 				self.solution.sort(key=lambda x: abs(x))
 				fd.write('s cnf 1 {:d} \n'.format(self.number_vars))
 				[fd.write('v ' + str(x) + '\n') for x in self.solution]
-
 		else:
 			fd.write('s cnf 0 {:d}'.format(self.number_vars) + '\n')
-
 		fd.close()
