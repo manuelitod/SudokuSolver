@@ -91,18 +91,20 @@ class Sat:
 		preposition, unit_assignment = self.unit_propagation(preposition)
 		assignment = assignment + pure_assignment + unit_assignment
 
+		exec_time = (time.time() - self.start_time)
+
+		# Revisamos si la búsqueda por la solución ha durado más de 120 segundos
+		if (exec_time > 120):
+			solution = ['time out']
+			self.solution = solution
+			return solution
+
 		# Si el valor de preposition es "-1" se tiene que se encontró algún problema y el problema es insatisfacible.
 		if preposition == - 1:
 			return []
 		if not preposition:
 			self.solution = assignment
 			return assignment
-
-		exec_time = (time.time() - self.start_time)
-
-		if (exec_time > -1):
-			solution = ['time out']
-			return solution
 		
 		variable = self.random_variable_selection(preposition)
 		solution = self.solve(self.reduce_preposition(preposition, variable), assignment + [variable])
@@ -113,7 +115,6 @@ class Sat:
 	def write_solution(self):
 
 		output_file_name = self.file_name.split('/')[-1]
-		output_file_name = output_file_name.split('.')[0]
 		fd = open('sol_' + output_file_name, 'a')
 
 		self.start_time = time.time()
