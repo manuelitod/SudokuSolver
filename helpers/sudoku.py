@@ -41,8 +41,7 @@ def get_sudoku_from_sat(sol_filename, translator):
 
 			if int(satisfy) != 1:
 
-				print("Esto se jodio, compadre.")
-				return
+				return line
 			continue
 
 		literal = line.split(' ')[1]
