@@ -118,7 +118,7 @@ class Sat:
 	def write_solution(self):
 
 		output_file_name = self.file_name.split('/')[-1]
-		fd = open('sol_' + output_file_name, 'a')
+		fd = open('sol_sat_' + output_file_name, 'a')
 		self.start_time = time.time()
 		self.solve(self.clauses, [])
 

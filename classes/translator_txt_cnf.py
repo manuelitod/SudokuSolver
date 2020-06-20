@@ -21,10 +21,10 @@ class Translator:
 	
 	# Funcion para generar los literales
 	# y las clausulas del sodoku
-	def translate(self):
+	def translate(self, filename):
 		self.generate_literals()
 		self.build_preps()
-		sat_instance = Sat(len(self.literals), len(self.preps), 'test')
+		sat_instance = Sat(len(self.literals), len(self.preps), filename)
 		sat_instance.set_clauses(self.preps)
 		sat_instance.write_solution()
 	
@@ -54,7 +54,6 @@ class Translator:
 					literal = y_literal+x_literal+self.sodoku.board[y][x]
 					clauses.append([literal])
 		self.preps = self.preps + clauses
-		print('Literales a ser activados', clauses)
 		return clauses
 
 	# Funcion para generar todas las clausulas
@@ -62,15 +61,11 @@ class Translator:
 	def build_preps(self):
 		self.gen_completeness_preps()
 		completitud = len(self.preps)
-		print('Completitud', completitud, '\n')
 		self.gen_uniqueness_preps()
 		unicidad = len(self.preps) - completitud
-		print('Unicidad', unicidad, '\n')
 		self.gen_validity_preps()
 		validez = len(self.preps) - completitud - unicidad
-		print('Validez', validez, '\n')
 		self.gen_sodoku_cells_preps()
-		print('Lista de clausulas \n', self.preps)
 		return
 
 	# Funcion para generar las clausulas de completitud
