@@ -34,7 +34,7 @@ def get_sudoku_from_sat(sol_filename, translator):
 	counter = 0
 
 	for line in fd:
-
+		if line == '\n': continue
 		if counter == 0:
 
 			counter = 1
@@ -56,13 +56,17 @@ def get_sudoku_from_sat(sol_filename, translator):
 
 # Método que escribe el fichero que contiene la solución del sudoku.
 
-def write_sudoku_sol(sudokus, solutions, filename):
+def write_sudoku_sol(sudokus, solutions, filename, is_zchaff=False):
 
 	# Escribimos el sudoku
 	fd = open(filename, 'a')
 	fd_times = open('../scripts/SatOutputTimes/' + filename, 'a')
-	fd_report = open('Reporte de ejecucion Sat propio.txt', 'a')
-	fd_report.write("Reporte de ejecución de implementación SAT propia \n")
+	if is_zchaff:
+		fd_report = open('Reporte de ejecucion Sat Zchaff.txt', 'a')
+		fd_report.write("Reporte de ejecución de implementación SAT zchaff \n")
+	else:
+		fd_report = open('Reporte de ejecucion Sat propio.txt', 'a')
+		fd_report.write("Reporte de ejecución de implementación SAT propia \n")
 
 	for index, solution in enumerate(solutions):
 		fd.write(solution[0] + '\n')
@@ -86,6 +90,7 @@ def write_sudoku_sol(sudokus, solutions, filename):
 def write_sat_format(preps, lits, filename, counter):
 
 	file = '../scripts/SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
+	file_input = './SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
 	fd = open(file, 'a')
 	prologue = 'p cnf ' + str(lits) + ' ' + str(len(preps)) + '\n'
 
@@ -102,3 +107,4 @@ def write_sat_format(preps, lits, filename, counter):
 		fd.write(line)
 
 	fd.close()
+	return file_input

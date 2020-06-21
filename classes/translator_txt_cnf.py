@@ -21,12 +21,12 @@ class Translator:
 		self.preps = []
 		self.present_literals = {}
 		self.total_exec_time = 0
+		self.generate_literals()
+		self.build_preps()
 	
 	# Funcion para generar los literales
 	# y las clausulas del sudoku
 	def translate(self, filename, counter):
-		self.generate_literals()
-		self.build_preps()
 		sat_instance = Sat(len(self.literals), len(self.preps), filename, counter)
 		sat_instance.set_clauses(self.preps)
 		start_time = time.time()
