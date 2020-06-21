@@ -44,8 +44,8 @@ class sudoku:
 		return
 		
 	# Print sudoku de manera legible
-	def print(self):
-		print(np.matrix(self.board))
+	def print(self, filename=None):
+		print(np.matrix(self.board), file=filename)
 	
 	# Print solucion del sudoku de manera legible
 	def print_solution(self):

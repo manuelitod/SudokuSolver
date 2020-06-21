@@ -6,28 +6,21 @@ from helpers.sudoku import (create_sudoku_array_instances,
 from classes.translator_txt_cnf import Translator
 import sys
 
-
-def test_sat():
-	sat_instances = create_sat_instances(sys.argv[1])
-	for sat_instance in sat_instances:
-		sat_instance.write_solution()
-
-def test_sudoku_sat():
+def run_sat_solver():
 	solutions = []
 	sudokus = create_sudoku_array_instances(sys.argv[1])
 	counter = 0
+
 	for sudoku in sudokus:
 		trans = Translator(sudoku.size, sudoku)
 		trans.translate(sys.argv[1], counter)
 		write_sat_format(trans.preps, pow(trans.dim, 6), sys.argv[1], counter)
-		sol_sat_filename = 'sol_sat_' + str(counter) + '_' + sys.argv[1].split('/')[-1]
+		sol_sat_filename = '../scripts/SatOutput/sol_sat_' + str(counter) + '_' + sys.argv[1].split('/')[-1]
 		solution = get_sudoku_from_sat(sol_sat_filename, trans)
 		solutions.append(solution)
 		counter = counter + 1
 	sol_filename = 'sol_' +  sys.argv[1].split('/')[-1]
-	write_sudoku_sol(solutions, sol_filename)
+	write_sudoku_sol(sudokus, solutions, sol_filename)
 		
-
-
 if __name__ == '__main__':
-	test_sudoku_sat()
+	run_sat_solver()

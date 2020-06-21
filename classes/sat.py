@@ -98,7 +98,7 @@ class Sat:
 		exec_time = (time.time() - self.start_time)
 
 		# Revisamos si la búsqueda por la solución ha durado más de 300 segundos
-		if (exec_time > 300):
+		if (exec_time > 120):
 			solution = ['time out']
 			self.solution = solution
 			return solution
@@ -119,7 +119,7 @@ class Sat:
 	def write_solution(self):
 
 		output_file_name = self.file_name.split('/')[-1]
-		fd = open('sol_sat_' + str(self.counter) + '_' + output_file_name, 'a')
+		fd = open('../scripts/SatOutput/sol_sat_' + str(self.counter) + '_' + output_file_name, 'a')
 		self.start_time = time.time()
 		self.solve(self.clauses, [])
 

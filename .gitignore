@@ -129,7 +129,10 @@ dmypy.json
 .pyre/
 
 # Archivo solucion
-sol_*
-sat_*
 zChaff/
 zchaff64/
+scripts/SatInput
+scripts/SatOutput
+scripts/SatOutputTimes
+scripts/sol_*
+scripts/Reporte*

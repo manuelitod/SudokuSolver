@@ -1,6 +1,7 @@
 # Clase encargada de leer el fichero que contiene la información del sudoku,
 # traducirlo a cnf y producir el fichero de entrada para SAT
 from classes.sat import Sat
+import time
 
 class Literal:
 	def __init__(self, y,x,value, literal):
@@ -18,6 +19,7 @@ class Translator:
 		self.literals = []
 		self.literals_values = []
 		self.preps = []
+		self.total_exec_time = 0
 	
 	# Funcion para generar los literales
 	# y las clausulas del sudoku
@@ -26,8 +28,10 @@ class Translator:
 		self.build_preps()
 		sat_instance = Sat(len(self.literals), len(self.preps), filename, counter)
 		sat_instance.set_clauses(self.preps)
+		start_time = time.time()
 		sat_instance.write_solution()
-	
+		self.total_exec_time = round((time.time() - start_time)*1000,2)
+
 	# Funcion para generar los literales
 	# utilizando la biyeccion a [1, N ** 6]	
 	def generate_literals(self):

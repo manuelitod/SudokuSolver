@@ -20,6 +20,7 @@ def create_sudoku_array_instances(sudoku_filename):
 	for sudoku_line in sudoku_file:
 		# To-do Checkear si la linea es valida
 		sudoku_array_instances.append(create_sudoku_instance(sudoku_line))
+	sudoku_file.close()
 	return sudoku_array_instances
 
 # Método que lee un fichero que contiene la salida de un resolvedor de SAT y
@@ -39,7 +40,8 @@ def get_sudoku_from_sat(sol_filename, translator):
 			counter = 1
 			satisfy = line.split(' ')[2]
 
-			if int(satisfy) != 1: return line
+			if int(satisfy) == 0: return ('Instance Unsatisfiable', translator.total_exec_time, 0)
+			if int(satisfy) == -1: return ('Instance Timeout', translator.total_exec_time, -1)
 			sudoku = str(translator.dim) + ' '
 			continue
 
@@ -50,22 +52,40 @@ def get_sudoku_from_sat(sol_filename, translator):
 			sudoku = sudoku + str(literals[int(literal)-1].sudoku_value)
 
 	fd.close()
-	return sudoku
+	return (sudoku, translator.total_exec_time, 1)
 
 # Método que escribe el fichero que contiene la solución del sudoku.
 
-def write_sudoku_sol(solutions, filename):
+def write_sudoku_sol(sudokus, solutions, filename):
 
+	# Escribimos el sudoku
 	fd = open(filename, 'a')
+	fd_times = open('../scripts/SatOutputTimes/' + filename, 'a')
+	fd_report = open('Reporte de ejecucion Sat propio.txt', 'a')
+	fd_report.write("Reporte de ejecución de implementación SAT propia \n")
 
-	for i in solutions:
-		fd.write(i + '\n')
+	for index, solution in enumerate(solutions):
+		fd.write(solution[0] + '\n')
+		fd_times.write(str(solution[1]) + '\n')
+
+		# Generamos el informe
+		fd_report.write("Instancia número " + str(index) + '\n')
+		fd_report.write('Entrada: \n')
+		sudokus[index].print(fd_report)
+		fd_report.write('Salida: \n')
+		if solution[2] == 0 or solution[2] == -1:
+			fd_report.write("No tiene solución o se agoto el tiempo para solucionarlo \n")
+		else:
+			create_sudoku_instance(solution[0]).print(fd_report)
+		fd_report.write("Tiempo de ejecución: " + str(solution[1]) + 'ms \n')
 
 	fd.close()
+	fd_times.close()
+	fd_report.close()
 
 def write_sat_format(preps, lits, filename, counter):
 
-	file = 'sat_' + str(counter) + '_' + filename.split('/')[-1]
+	file = '../scripts/SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
 	fd = open(file, 'a')
 	prologue = 'p cnf ' + str(lits) + ' ' + str(len(preps)) + '\n'
 
