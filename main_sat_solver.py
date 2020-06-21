@@ -19,7 +19,7 @@ def run_sat_solver():
 		solution = get_sudoku_from_sat(sol_sat_filename, trans)
 		solutions.append(solution)
 		counter = counter + 1
-	sol_filename = 'sol_' +  sys.argv[1].split('/')[-1]
+	sol_filename = 'sol_sat_' +  sys.argv[1].split('/')[-1]
 	write_sudoku_sol(sudokus, solutions, sol_filename)
 		
 if __name__ == '__main__':

@@ -17,7 +17,7 @@ def run_zchaff_solver():
 	for sudoku in sudokus:
 		trans = Translator(sudoku.size, sudoku)
 		file = write_sat_format(trans.preps, pow(trans.dim, 6), sys.argv[1], counter)
-		solution_file = './SatOutput/sol_sat_zchaff' + str(counter) + '_' + sys.argv[1].split('/')[-1]
+		solution_file = './SatOutput/sol_sat_zchaff_' + str(counter) + '_' + sys.argv[1].split('/')[-1]
 		command =  './zchaff64/zchaff ' + file + ' >> ' + solution_file
 		tiempo_inicio = time.time()
 		# Codea lo de tomar tiempo de inicio, tiempo final y escribir en el la carpeta de output time. Ok
@@ -26,7 +26,7 @@ def run_zchaff_solver():
 		solution = get_sudoku_from_sat(solution_file, trans)
 		solutions.append(solution)
 		counter += 1
-	sol_filename = 'sol_zchaff' +  sys.argv[1].split('/')[-1]
+	sol_filename = 'sol_zchaff_' +  sys.argv[1].split('/')[-1]
 	write_sudoku_sol(sudokus, solutions, sol_filename, True)
 
 if __name__ == '__main__':
