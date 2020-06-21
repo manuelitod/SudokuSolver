@@ -1,20 +1,20 @@
-from classes.sudoku import Soduku
-from helpers.sudoku import create_soduku_instance, create_soduku_array_instances
+from classes.sudoku import sudoku
+from helpers.sudoku import create_sudoku_instance, create_sudoku_array_instances
 import sys
 import traceback
 
 
-# Main de prueba para una instancia de soduku
+# Main de prueba para una instancia de sudoku
 if __name__ == '__main__':
 	try:
-		soduku_file = open(sys.argv[1], 'r')
-		soduku_instances = create_soduku_array_instances(soduku_file)
-		print('Entrada del soduku')
-		soduku_instances[0].print()
+		sudoku_file = open(sys.argv[1], 'r')
+		sudoku_instances = create_sudoku_array_instances(sudoku_file)
+		print('Entrada del sudoku')
+		sudoku_instances[0].print()
 		print('-------------------')
-		print('Salida del soduku')
-		soduku_instances[0].print_solution()
-		soduku_file.close()
+		print('Salida del sudoku')
+		sudoku_instances[0].print_solution()
+		sudoku_file.close()
 	except:
 		traceback.print_exc()
-		print("Error al leer archivo de soduku")
+		print("Error al leer archivo de sudoku")

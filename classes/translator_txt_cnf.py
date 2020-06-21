@@ -6,13 +6,13 @@ class Literal:
 	def __init__(self, y,x,value, literal):
 		self.y = y
 		self.x = x
-		self.sodoku_value = value
+		self.sudoku_value = value
 		self.literal_value = literal
 
 class Translator:
 
 	def __init__(self, dim, sudokus):
-		self.sodoku = sudokus
+		self.sudoku = sudokus
 		self.dim = int(dim)
 		self.dim_pow = pow(self.dim,2)
 		self.literals = []
@@ -20,7 +20,7 @@ class Translator:
 		self.preps = []
 	
 	# Funcion para generar los literales
-	# y las clausulas del sodoku
+	# y las clausulas del sudoku
 	def translate(self, filename, counter):
 		self.generate_literals()
 		self.build_preps()
@@ -43,21 +43,21 @@ class Translator:
 		return
 	
 	# Funcion que genera las clausulas
-	# de las casillas activadas del sodoku
-	def gen_sodoku_cells_preps(self):
+	# de las casillas activadas del sudoku
+	def gen_sudoku_cells_preps(self):
 		clauses = []
 		for y in range(self.dim_pow):
 			for x in range(self.dim_pow):
-				if self.sodoku.board[y][x] != 0:
+				if self.sudoku.board[y][x] != 0:
 					y_literal = int(y)*pow(self.dim, 4)
 					x_literal = int(x)*self.dim_pow
-					literal = y_literal+x_literal+self.sodoku.board[y][x]
+					literal = y_literal+x_literal+self.sudoku.board[y][x]
 					clauses.append([literal])
 		self.preps = self.preps + clauses
 		return clauses
 
 	# Funcion para generar todas las clausulas
-	# del soduku
+	# del sudoku
 	def build_preps(self):
 		self.gen_completeness_preps()
 		completitud = len(self.preps)
@@ -65,7 +65,7 @@ class Translator:
 		unicidad = len(self.preps) - completitud
 		self.gen_validity_preps()
 		validez = len(self.preps) - completitud - unicidad
-		self.gen_sodoku_cells_preps()
+		self.gen_sudoku_cells_preps()
 		return
 
 	# Funcion para generar las clausulas de completitud
@@ -94,7 +94,7 @@ class Translator:
 		for index, literal in enumerate(literals):
 			for next_index in range(index+1, len(literals)):
 				if only_values:
-					if literal.sodoku_value == literals[next_index].sodoku_value:
+					if literal.sudoku_value == literals[next_index].sudoku_value:
 						no_preps_literals.append([-literal.literal_value, -(literals[next_index].literal_value)])	
 					continue
 				else:
@@ -103,7 +103,7 @@ class Translator:
 
 	# Dada la coordenada inicial de una subseccion 
 	# se devuelve un arreglo de coordenadas de esa coordenada
-	def get_soduku_section(self, coordinates):
+	def get_sudoku_section(self, coordinates):
 		x = coordinates[0]
 		y = coordinates[1]
 		section_coordinates = []
@@ -114,10 +114,10 @@ class Translator:
 
 	# Funcion para obtener los literales
 	# de una fila, columna o seccion
-	def get_sodoku_literals(self, index, index_type):
+	def get_sudoku_literals(self, index, index_type):
 		literals = []
 		if index_type == 'section':
-			section_indexes = self.get_soduku_section(index)
+			section_indexes = self.get_sudoku_section(index)
 			for section_index in section_indexes:
 				for d in range(1,self.dim_pow+1):
 					y_literal = int(section_index[0])*pow(self.dim, 4)
@@ -141,16 +141,16 @@ class Translator:
 
 	def gen_validity_preps(self):
 		for y in range(self.dim_pow):
-			row_literals = self.get_sodoku_literals(y, 'row')
+			row_literals = self.get_sudoku_literals(y, 'row')
 			row_preps = self.gen_not_prep(row_literals, True)
 			self.preps = self.preps + row_preps
 		for x in range(self.dim_pow):
-			col_literals = self.get_sodoku_literals(x, 'col')
+			col_literals = self.get_sudoku_literals(x, 'col')
 			col_preps = self.gen_not_prep(col_literals, True)
 			self.preps = self.preps + col_preps
 		start_section_index = self.get_start_index()
 		for start_index in start_section_index:
-			section_literals = self.get_sodoku_literals(start_index, 'section')
+			section_literals = self.get_sudoku_literals(start_index, 'section')
 			section_preps = self.gen_not_prep(section_literals, True)
 			self.preps = self.preps + section_preps
 		return

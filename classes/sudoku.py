@@ -1,17 +1,17 @@
-# Archivo para la clase Soduku
+# Archivo para la clase sudoku
 
 import numpy as np 
 
-class Soduku:
-	def __init__(self, soduku_board, size):
+class sudoku:
+	def __init__(self, sudoku_board, size):
 		self.size = int(size)
 		self.size_pow = pow(self.size,2)
-		self.board = soduku_board
-		self.solution_board = soduku_board.copy()
+		self.board = sudoku_board
+		self.solution_board = sudoku_board.copy()
 		self.solved = False
 
 	# Checkear si es posible colocar un numero
-	# en el soduku
+	# en el sudoku
 	def possible_step(self, y, x, n):
 		for i in range(0, self.size_pow):
 			if self.solution_board[y][i] == n:
@@ -27,7 +27,7 @@ class Soduku:
 					return False
 		return True
 
-	# Resolver Soduku de manera recursiva
+	# Resolver sudoku de manera recursiva
 	# Retorno al encontrar una solucion
 	def solve(self):
 		for y in range(self.size_pow):
@@ -43,11 +43,11 @@ class Soduku:
 		self.solved = True
 		return
 		
-	# Print soduku de manera legible
+	# Print sudoku de manera legible
 	def print(self):
 		print(np.matrix(self.board))
 	
-	# Print solucion del soduku de manera legible
+	# Print solucion del sudoku de manera legible
 	def print_solution(self):
 		self.solve()
 		print(np.matrix(self.solution_board))
