@@ -19,6 +19,7 @@ class Translator:
 		self.literals = []
 		self.literals_values = []
 		self.preps = []
+		self.present_literals = {}
 		self.total_exec_time = 0
 	
 	# Funcion para generar los literales
@@ -49,35 +50,43 @@ class Translator:
 	# Funcion que genera las clausulas
 	# de las casillas activadas del sudoku
 	def gen_sudoku_cells_preps(self):
-		clauses = []
+		clauses = {}
 		for y in range(self.dim_pow):
 			for x in range(self.dim_pow):
 				if self.sudoku.board[y][x] != 0:
 					y_literal = int(y)*pow(self.dim, 4)
 					x_literal = int(x)*self.dim_pow
 					literal = y_literal+x_literal+self.sudoku.board[y][x]
-					clauses.append([literal])
-		self.preps = self.preps + clauses
-		return clauses
+					clauses[literal] = True 
+		self.present_literals = clauses
+		self.preps = list(map(lambda key_to_array: [key_to_array], clauses.keys()))
+		return
 
 	# Funcion para generar todas las clausulas
 	# del sudoku
 	def build_preps(self):
+		self.gen_sudoku_cells_preps()
 		self.gen_completeness_preps()
 		completitud = len(self.preps)
 		self.gen_uniqueness_preps()
 		unicidad = len(self.preps) - completitud
 		self.gen_validity_preps()
 		validez = len(self.preps) - completitud - unicidad
-		self.gen_sudoku_cells_preps()
 		return
 
 	# Funcion para generar las clausulas de completitud
 	def gen_completeness_preps(self):
-		self.literals_values = list(map(lambda literal: literal.literal_value, self.literals))
+		self.literals_values = list(map(lambda literal: literal.literal_value, self.literals))			
 		literal_preps = [self.literals_values[i * self.dim_pow:(i + 1) * self.dim_pow] \
 					for i in range((len(self.literals) + self.dim_pow - 1) // self.dim_pow )]
-		self.preps = literal_preps
+		literal_preps_updated = []
+		for literal_prep in literal_preps:
+			counter = 0
+			for literal in literal_prep:
+				if self.present_literals.get(literal, False): break
+				counter += 1
+			if counter == self.dim_pow: literal_preps_updated.append(literal_prep)
+		self.preps = self.preps + literal_preps_updated
 		return
 
 	# Dado una lista de clausulas de completitud
@@ -98,8 +107,9 @@ class Translator:
 		for index, literal in enumerate(literals):
 			for next_index in range(index+1, len(literals)):
 				if only_values:
-					if literal.sudoku_value == literals[next_index].sudoku_value:
-						no_preps_literals.append([-literal.literal_value, -(literals[next_index].literal_value)])	
+					is_sudoku_literal = (literal.sudoku_value == literals[next_index].sudoku_value)
+					if is_sudoku_literal:
+							no_preps_literals.append([-literal.literal_value, -(literals[next_index].literal_value)])	
 					continue
 				else:
 					no_preps_literals.append([-literal, -(literals[next_index])])
