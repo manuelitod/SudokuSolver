@@ -11,15 +11,20 @@ def test_sat():
 		sat_instance.write_solution()
 
 def test_sodoku_sat():
+	solutions = []
 	sudokus = create_soduku_array_instances(sys.argv[1])
+	counter = 0
 	for sodoku in sudokus:
 		trans = Translator(sodoku.size, sodoku)
-		trans.translate(sys.argv[1])
-		write_sat_format(trans.preps, pow(trans.dim, 6), sys.argv[1])
-		sol_sat_filename = 'sol_sat_' + sys.argv[1].split('/')[-1]
+		trans.translate(sys.argv[1], counter)
+		write_sat_format(trans.preps, pow(trans.dim, 6), sys.argv[1], counter)
+		sol_sat_filename = 'sol_sat_' + str(counter) + '_' + sys.argv[1].split('/')[-1]
 		solution = get_sudoku_from_sat(sol_sat_filename, trans)
-		sol_filename = 'sol_' + sys.argv[1].split('/')[-1]
-		write_sudoku_sol(solution, sol_filename)
+		solutions.append(solution)
+		counter = counter + 1
+	sol_filename = 'sol_' +  sys.argv[1].split('/')[-1]
+	write_sudoku_sol(solution, sol_filename)
+		
 
 
 if __name__ == '__main__':
