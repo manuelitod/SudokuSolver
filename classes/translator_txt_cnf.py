@@ -21,10 +21,10 @@ class Translator:
 	
 	# Funcion para generar los literales
 	# y las clausulas del sodoku
-	def translate(self, filename):
+	def translate(self, filename, counter):
 		self.generate_literals()
 		self.build_preps()
-		sat_instance = Sat(len(self.literals), len(self.preps), filename)
+		sat_instance = Sat(len(self.literals), len(self.preps), filename, counter)
 		sat_instance.set_clauses(self.preps)
 		sat_instance.write_solution()
 	

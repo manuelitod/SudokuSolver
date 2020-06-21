@@ -3,13 +3,14 @@ import random
 import time
 
 class Sat:
-	def __init__(self, number_vars, number_clauses, file_name):
+	def __init__(self, number_vars, number_clauses, file_name, counter):
 		self.number_vars = int(number_vars)
 		self.number_clauses = int(number_clauses)
 		self.clauses = []
 		self.solution = []
 		self.start_time = 0
 		self.file_name = file_name
+		self.counter = counter
 
 	def set_clauses(self, clauses):
 		self.clauses = clauses.copy()
@@ -118,7 +119,7 @@ class Sat:
 	def write_solution(self):
 
 		output_file_name = self.file_name.split('/')[-1]
-		fd = open('sol_sat_' + output_file_name, 'a')
+		fd = open('sol_sat_' + str(self.counter) + '_' + output_file_name, 'a')
 		self.start_time = time.time()
 		self.solve(self.clauses, [])
 

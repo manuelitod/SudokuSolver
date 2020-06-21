@@ -59,12 +59,12 @@ def write_sudoku_sol(solution, filename):
 
 	fd = open(filename, 'a')
 
-	fd.write(solution)
+	fd.write(solution + '\n')
 	fd.close()
 
-def write_sat_format(preps, lits, filename):
+def write_sat_format(preps, lits, filename, counter):
 
-	file = 'sat_' + filename.split('/')[-1]
+	file = 'sat_' + str(counter) + '_' + filename.split('/')[-1]
 	fd = open(file, 'a')
 	prologue = 'p cnf ' + str(lits) + ' ' + str(len(preps)) + '\n'
 
