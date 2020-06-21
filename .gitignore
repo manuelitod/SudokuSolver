@@ -129,4 +129,7 @@ dmypy.json
 .pyre/
 
 # Archivo solucion
-.sol_test
+sol_*
+sat_*
+zChaff/
+zchaff64/
