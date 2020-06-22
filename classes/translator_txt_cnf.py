@@ -26,8 +26,8 @@ class Translator:
 	
 	# Funcion para generar los literales
 	# y las clausulas del sudoku
-	def translate(self, filename, counter):
-		sat_instance = Sat(len(self.literals), len(self.preps), filename, counter)
+	def translate(self, filename, counter, time_limit):
+		sat_instance = Sat(len(self.literals), len(self.preps), filename, counter, time_limit)
 		sat_instance.set_clauses(self.preps)
 		start_time = time.time()
 		sat_instance.write_solution()
@@ -175,3 +175,22 @@ class Translator:
 			for j in range(0, self.dim):
 				index.append((i*self.dim, j*self.dim))
 		return index
+	
+	def write_sat_format(self, filename, counter):
+	
+		file = '../scripts/SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
+		file_input = './SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
+		fd = open(file, 'a')
+		prologue = 'p cnf ' + str(pow(self.dim, 6)) + ' ' + str(len(self.preps)) + '\n'
+
+		fd.write(prologue)
+
+		for i in range(0, len(self.preps)):
+			line = ''
+			for j in self.preps[i]:
+				line = line + str(j) + ' '
+			line = line + '0\n'
+			fd.write(line)
+
+		fd.close()
+		return file_input

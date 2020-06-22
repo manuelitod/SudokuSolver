@@ -26,7 +26,7 @@ def create_sudoku_array_instances(sudoku_filename):
 # Método que lee un fichero que contiene la salida de un resolvedor de SAT y
 # lo traduce a un string que contenga la solución del sudoku.
 
-def get_sudoku_from_sat(sol_filename, translator):
+def get_sudoku_from_sat(sol_filename, translator, is_zchaff=False):
 
 	sudoku = ''
 	literals = translator.literals
@@ -34,14 +34,23 @@ def get_sudoku_from_sat(sol_filename, translator):
 	counter = 0
 
 	for line in fd:
+		# El zchaff es magico e imprime un \n en la linea 0
 		if line == '\n': continue
 		if counter == 0:
 
 			counter = 1
-			satisfy = line.split(' ')[2]
+			satisfy = line
+			if not is_zchaff: 
+				satisfy = satisfy.split(' ')[2]
+				if int(satisfy) == 0: return ('Instance Unsatisfiable', translator.total_exec_time, 0)
+				if int(satisfy) == -1: return ('Instance Timeout', translator.total_exec_time, -1)
+			else:
+				satisfy = satisfy.split('\n')[0]
+				if satisfy == 'Instance Unsatisfiable':
+					return ('Instance Unsatisfiable', translator.total_exec_time, 0)
+				elif satisfy == 'Instance Timeout':
+					return ('Instance Timeout', translator.total_exec_time, -1)
 
-			if int(satisfy) == 0: return ('Instance Unsatisfiable', translator.total_exec_time, 0)
-			if int(satisfy) == -1: return ('Instance Timeout', translator.total_exec_time, -1)
 			sudoku = str(translator.dim) + ' '
 			continue
 
@@ -56,55 +65,32 @@ def get_sudoku_from_sat(sol_filename, translator):
 
 # Método que escribe el fichero que contiene la solución del sudoku.
 
-def write_sudoku_sol(sudokus, solutions, filename, is_zchaff=False):
+def write_sudoku_sol(sudoku, solution, filename, counter, is_zchaff=False):
 
-	# Escribimos el sudoku
-	fd = open(filename, 'a')
+	fd = open('../scripts/SatSols/' + filename, 'a')
 	fd_times = open('../scripts/SatOutputTimes/' + filename, 'a')
 	if is_zchaff:
-		fd_report = open('Reporte de ejecucion Sat Zchaff.txt', 'a')
-		fd_report.write("Reporte de ejecución de implementación SAT zchaff \n")
+		fd_report = open('../scripts/Reports/' + filename, 'a')
+		if counter == 0: fd_report.write("Reporte de ejecución de implementación SAT zchaff \n")
 	else:
-		fd_report = open('Reporte de ejecucion Sat propio.txt', 'a')
-		fd_report.write("Reporte de ejecución de implementación SAT propia \n")
+		fd_report = open('../scripts/Reports/' + filename, 'a')
+		if counter == 0: fd_report.write("Reporte de ejecución de implementación SAT propia \n")	
+	fd.write(solution[0] + '\n')
+	fd_times.write(str(solution[1]) + '\n')
 
-	for index, solution in enumerate(solutions):
-		fd.write(solution[0] + '\n')
-		fd_times.write(str(solution[1]) + '\n')
-
-		# Generamos el informe
-		fd_report.write("Instancia número " + str(index) + '\n')
-		fd_report.write('Entrada: \n')
-		sudokus[index].print(fd_report)
-		fd_report.write('Salida: \n')
-		if solution[2] == 0 or solution[2] == -1:
-			fd_report.write("No tiene solución o se agoto el tiempo para solucionarlo \n")
-		else:
-			create_sudoku_instance(solution[0]).print(fd_report)
-		fd_report.write("Tiempo de ejecución: " + str(solution[1]) + 'ms \n')
+	# Generamos el informe
+	fd_report.write("Instancia número " + str(counter + 1) + '\n')
+	fd_report.write('Entrada: \n')
+	sudoku.print(fd_report)
+	fd_report.write('Salida: \n')
+	if solution[2] == -1:
+		fd_report.write("Se agoto el tiempo para solucionarlo \n")
+	elif solution[2] == 0:
+		fd_report.write("No tiene solución \n")
+	else:
+		create_sudoku_instance(solution[0]).print(fd_report)
+	fd_report.write("Tiempo de ejecución: " + str(solution[1]) + 'ms \n')
 
 	fd.close()
 	fd_times.close()
 	fd_report.close()
-
-def write_sat_format(preps, lits, filename, counter):
-
-	file = '../scripts/SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
-	file_input = './SatInput/sat_' + str(counter) + '_' + filename.split('/')[-1]
-	fd = open(file, 'a')
-	prologue = 'p cnf ' + str(lits) + ' ' + str(len(preps)) + '\n'
-
-	fd.write(prologue)
-
-	for i in range(0, len(preps)):
-
-		line = ''
-
-		for j in preps[i]:
-			line = line + str(j) + ' '
-
-		line = line + '0\n'
-		fd.write(line)
-
-	fd.close()
-	return file_input

@@ -132,5 +132,5 @@ dmypy.json
 scripts/SatInput
 scripts/SatOutput
 scripts/SatOutputTimes
-scripts/sol_*
-scripts/Reporte*
+scripts/SatSols
+scripts/Reports

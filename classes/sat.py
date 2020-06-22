@@ -3,7 +3,7 @@ import random
 import time
 
 class Sat:
-	def __init__(self, number_vars, number_clauses, file_name, counter):
+	def __init__(self, number_vars, number_clauses, file_name, counter, time_limit):
 		self.number_vars = int(number_vars)
 		self.number_clauses = int(number_clauses)
 		self.clauses = []
@@ -11,6 +11,7 @@ class Sat:
 		self.start_time = 0
 		self.file_name = file_name
 		self.counter = counter
+		self.time_limit = time_limit
 
 	def set_clauses(self, clauses):
 		self.clauses = clauses.copy()
@@ -98,7 +99,7 @@ class Sat:
 		exec_time = (time.time() - self.start_time)
 
 		# Revisamos si la búsqueda por la solución ha durado más de 300 segundos
-		if (exec_time > 120):
+		if (exec_time > self.time_limit):
 			solution = ['time out']
 			self.solution = solution
 			return solution

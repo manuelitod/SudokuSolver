@@ -29,4 +29,5 @@ def compare_sat_solvers():
 	fd_zchaff.close()
 
 if __name__ == '__main__':
+	print("Mostrar gráfica de los algoritmos ejecutados")
 	compare_sat_solvers()
