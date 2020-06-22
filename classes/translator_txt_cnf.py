@@ -98,7 +98,23 @@ class Translator:
 			unique_preps = unique_preps + self.gen_not_prep(prep)
 		self.preps = self.preps + unique_preps
 		return
-
+	
+	# Funcion para checkear que tipo de clausula
+	# se debe agregar si algun literal esta presente
+	# en el sudoku
+	def check_literal(self, literal1, literal2):
+		is_literal_present = self.present_literals.get(literal1, False)
+		is_next_literal_present = self.present_literals.get(literal2, False)
+		if not is_literal_present and not is_next_literal_present: 
+			return [-literal1, -literal2]
+		elif is_literal_present and not is_next_literal_present:
+			return [-literal2]
+		elif not is_literal_present and is_next_literal_present:
+			return [-literal1]
+		else:
+			# El solve se dara cuenta que esta clausura nunca sera true
+			return [-literal1, -literal2]
+	
 	# Dado un conjunto de literales
 	# se devuelve clasulas de unicidad
 	# El flag only values construye la de validez
@@ -109,10 +125,12 @@ class Translator:
 				if only_values:
 					is_sudoku_literal = (literal.sudoku_value == literals[next_index].sudoku_value)
 					if is_sudoku_literal:
-							no_preps_literals.append([-literal.literal_value, -(literals[next_index].literal_value)])	
+						clause = self.check_literal(literal.literal_value, literals[next_index].literal_value)
+						if len(clause) > 0: no_preps_literals.append(clause)
 					continue
 				else:
-					no_preps_literals.append([-literal, -(literals[next_index])])
+					clause = self.check_literal(literal, literals[next_index])
+					if len(clause) > 0: no_preps_literals.append(clause)
 		return no_preps_literals
 
 	# Dada la coordenada inicial de una subseccion 
