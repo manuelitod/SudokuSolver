@@ -26,4 +26,4 @@ mkdir $OUTSATTIMEDIR
 
 # Ejecutamos el resolvedor propio
 # Tomamos T = 2 segs
-python3 ../main_zchaff.py $1 2
+python ../main_zchaff.py $1 2

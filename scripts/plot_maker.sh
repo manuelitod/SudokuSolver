@@ -11,4 +11,4 @@ SATZCHAFFTIMEFILE="$SATZCHAFFPREFIX$FILE"
 ./resolvedor_zchaff.sh $1
 
 # Ploteamos
-python3 ../main_plt_maker.py $1 $SATPROPIOTIMEFILE $SATZCHAFFTIMEFILE
+python ../main_plt_maker.py $1 $SATPROPIOTIMEFILE $SATZCHAFFTIMEFILE

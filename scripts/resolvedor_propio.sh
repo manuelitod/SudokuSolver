@@ -28,4 +28,4 @@ mkdir $SOLSATDIR
 
 # Ejecutamos el resolvedor propio
 # Tomamos T = 2 segs
-python3 ../main_sat_solver.py $1 2
+python ../main_sat_solver.py $1 2
