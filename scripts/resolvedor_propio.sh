@@ -27,5 +27,5 @@ mkdir $REPORTSDIR
 mkdir $SOLSATDIR
 
 # Ejecutamos el resolvedor propio
-# Tomamos T = 2 segs
-python3 ../main_sat_solver.py $1 2
+# Tomamos T = 60 segs
+python3 ../main_sat_solver.py $1 60
