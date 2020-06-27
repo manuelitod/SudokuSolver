@@ -31,3 +31,4 @@ def compare_sat_solvers():
 if __name__ == '__main__':
 	print("Mostrar gráfica de los algoritmos ejecutados")
 	compare_sat_solvers()
+	sys.exit(0)

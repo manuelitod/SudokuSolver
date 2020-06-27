@@ -30,3 +30,4 @@ def run_zchaff_solver():
 
 if __name__ == '__main__':
 	run_zchaff_solver()
+	sys.exit(0)

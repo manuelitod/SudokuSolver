@@ -24,3 +24,4 @@ def run_sat_solver():
 		
 if __name__ == '__main__':
 	run_sat_solver()
+	sys.exit(0)
