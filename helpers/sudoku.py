@@ -19,6 +19,7 @@ def create_sudoku_array_instances(sudoku_filename):
 	sudoku_array_instances = []
 	for sudoku_line in sudoku_file:
 		# To-do Checkear si la linea es valida
+		if (sudoku_line == '\n'): continue
 		sudoku_array_instances.append(create_sudoku_instance(sudoku_line))
 	sudoku_file.close()
 	return sudoku_array_instances

@@ -20,12 +20,12 @@ rm -rf $REPORTSDIR/$REPORTFILE
 rm -rf $SOLSATDIR/$ALLSATOUTPUT
 
 # Creamos directorios de salida
-mkdir $INPUTSATDIR
-mkdir $OUTSATDIR
-mkdir $OUTSATTIMEDIR
-mkdir $REPORTSDIR
-mkdir $SOLSATDIR
+mkdir $INPUTSATDIR > /dev/null 2>&1
+mkdir $OUTSATDIR > /dev/null 2>&1
+mkdir $OUTSATTIMEDIR > /dev/null 2>&1
+mkdir $REPORTSDIR > /dev/null 2>&1
+mkdir $SOLSATDIR > /dev/null 2>&1
 
 # Ejecutamos el resolvedor propio
-# Tomamos T = 2 segs
-python3 ../main_sat_solver.py $1 2
+# Tomamos T = 5 segs
+python3 ../main_sat_solver.py $1 5
