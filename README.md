@@ -139,7 +139,7 @@ La clase Translator ubicada en el archivo (/classes/translator_txt_cnf.py) conti
 
 ### Método generate_literals
 
-Este método nos genera la representación para cada literal de las clausulas del problema SAT. Se utilizó una clase 'Literal' para almacenar los valores correspondientes a la construcción del mismo, tales como: Fila, Columna, Valor dentro del Sudoku y valor del literal.
+Este método nos genera la representación para cada literal de las clausulas del problema SAT. Se utilizó una clase 'Literal' para almacenar los valores correspondientes a la construcción del mismo, tales como: Fila, Columna, Valor dentro del Sudoku y valor del literal. Su complejidad es O(n^6), siendo n la dimensión del sudoku.
 
 ### Método gen_sudoku_cells_preps
 
@@ -151,6 +151,8 @@ Este método genera todas las clausulas de completitud del sudoku. Para ello se 
 
 Se realizó la optimización de excluir arreglos que contengan literales presentes en el hash creado en el método anterior.
 
+La complejidad de dicho método es O(n^4), siendo n la dimensión del sudoku.
+
 ### Método gen_not_prep
 
 Dado un arreglo de literales este método genera clausulas de unicidad (-l1,-l2) para cada uno de los literales presentes en el arreglo.
@@ -159,10 +161,18 @@ Se realizó la optimización de agregar estas clausulas de unicidad con el valor
 
 Para una entrada de literales: [1,2,3] este método retornará: [-1,-2],[-1,-3],[-2,-3] asumiendo que ninguno de estos literales esta presente en el sudoku.
 
+La complejidad de dicho método es O(n^2), donde n es el número de literales
+
 ### Método gen_uniqueness_preps
 
-Este metodo genera todas las clausulas de unicidad del sudoku. Para ello por cada clausula de completitud se utiliza el método auxiliar 'gen_not_prep' para obtener las clasusulas de unicidad.
+Este metodo genera todas las clausulas de unicidad del sudoku. Para ello por cada clausula de completitud se utiliza el método auxiliar 'gen_not_prep' para obtener las clasusulas de unicidad. Su complejidad es O(n), donde n es la cantidad de clausulas.
 
 ### Método gen_validity_preps
 
-Este metodo generara todas las clausulas de validez del sudoku. Por cada fila, columna y sección del sudoku se obtienen los literales de cada uno de ellos y se utiliza el método gen_not_prep para generar las clausulas de validez.
+Este metodo generara todas las clausulas de validez del sudoku. Por cada fila, columna y sección del sudoku se obtienen los literales de cada uno de ellos y se utiliza el método gen_not_prep para generar las clausulas de validez. La complejidad es O(n + n + n^2 + n^2) = O(n^2), siendo n la dimensión del sudoku
+
+## Notas:
+
+- El tiempo máximo utilizado es de 5 segundos, o 5000 milisegundos.
+- En el directorio raíz se encuentra el archivo sol_sat_InstanciasSudoku.txt, el cual contiene las soluciones gráficas (representación del tablero de sudoku de forma matricial) de los casos de prueba dados para el proyecto.
+- Todos los casos convergen a una solución (ya sea de satisfacibilidad o no satisfacibilidad). Los casos cuya ejecución no termina es debido sólo al hecho de la interrupción por límite de tiempo. De tener un valor de T mayor, dichos casos eventualmente convergerían.
