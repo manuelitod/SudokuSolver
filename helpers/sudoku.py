@@ -95,7 +95,8 @@ def write_sudoku_sol(sudoku, solution, filename, counter, is_zchaff=False):
             fd.write(solution[0] + '\n')
         else:
             fd.write("Solución inválida \n")
-
+    else:
+    	fd.write(solution[0] + '\n')
     fd_times.write(str(solution[1]) + '\n')
 
     # Generamos el informe

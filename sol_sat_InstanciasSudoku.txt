@@ -1,5 +1,5 @@
-Reporte de ejecuci贸n de implementaci贸n SAT propia 
-Instancia n煤mero 1
+Reporte de ejecuci髇 de implementaci髇 SAT propia 
+Instancia n鷐ero 1
 Entrada: 
 [[0 4 0 0 0 0 1 7 9]
  [0 0 2 0 0 8 0 5 4]
@@ -20,8 +20,8 @@ Salida:
  [3 6 1 4 2 9 7 8 5]
  [5 7 4 1 8 6 2 9 3]
  [9 2 8 3 5 7 4 6 1]]
-Tiempo de ejecuci贸n: 976.67ms 
-Instancia n煤mero 2
+Tiempo de ejecuci髇: 1005.82ms 
+Instancia n鷐ero 2
 Entrada: 
 [[8 0 2 0 5 0 7 0 1]
  [0 0 7 0 8 2 4 6 0]
@@ -42,8 +42,8 @@ Salida:
  [7 6 1 8 3 4 9 2 5]
  [2 9 5 6 1 7 3 8 4]
  [3 4 8 2 9 5 6 1 7]]
-Tiempo de ejecuci贸n: 986.66ms 
-Instancia n煤mero 3
+Tiempo de ejecuci髇: 962.13ms 
+Instancia n鷐ero 3
 Entrada: 
 [[0 0 0 0 0 0 0 0 7]
  [7 2 0 3 0 9 0 0 1]
@@ -64,8 +64,8 @@ Salida:
  [8 3 7 9 5 6 1 2 4]
  [2 6 4 1 8 7 9 5 3]
  [9 5 1 4 3 2 6 7 8]]
-Tiempo de ejecuci贸n: 995.34ms 
-Instancia n煤mero 4
+Tiempo de ejecuci髇: 1019.08ms 
+Instancia n鷐ero 4
 Entrada: 
 [[2 0 6 0 0 0 0 4 9]
  [0 3 7 0 0 9 0 0 0]
@@ -86,8 +86,8 @@ Salida:
  [9 7 8 2 5 4 6 3 1]
  [5 6 2 3 1 8 4 9 7]
  [4 1 3 9 7 6 2 5 8]]
-Tiempo de ejecuci贸n: 1258.05ms 
-Instancia n煤mero 5
+Tiempo de ejecuci髇: 1135.96ms 
+Instancia n鷐ero 5
 Entrada: 
 [[0 2 5 0 0 7 0 0 4]
  [0 0 1 0 0 5 0 2 0]
@@ -108,8 +108,8 @@ Salida:
  [1 5 3 9 7 8 2 4 6]
  [9 4 2 1 5 6 7 8 3]
  [8 7 6 2 4 3 9 1 5]]
-Tiempo de ejecuci贸n: 1028.52ms 
-Instancia n煤mero 6
+Tiempo de ejecuci髇: 1097.07ms 
+Instancia n鷐ero 6
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
  [0 8 0 0 1 0 0 0 6]
@@ -130,8 +130,8 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecuci贸n: 1264.92ms 
-Instancia n煤mero 7
+Tiempo de ejecuci髇: 1065.63ms 
+Instancia n鷐ero 7
 Entrada: 
 [[0 5 0 2 0 0 0 0 0]
  [3 0 0 0 0 5 0 8 0]
@@ -152,8 +152,8 @@ Salida:
  [5 8 1 6 4 7 9 3 2]
  [4 7 9 5 2 3 8 6 1]
  [2 3 6 8 1 9 4 5 7]]
-Tiempo de ejecuci贸n: 1126.54ms 
-Instancia n煤mero 8
+Tiempo de ejecuci髇: 1081.14ms 
+Instancia n鷐ero 8
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
  [0 8 0 0 1 0 0 0 0]
@@ -174,8 +174,8 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecuci贸n: 1571.7ms 
-Instancia n煤mero 9
+Tiempo de ejecuci髇: 1217.74ms 
+Instancia n鷐ero 9
 Entrada: 
 [[8 0 0 2 0 0 0 4 6]
  [0 0 7 9 0 0 0 0 0]
@@ -188,8 +188,8 @@ Entrada:
  [2 8 0 0 0 6 0 0 3]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5002.71ms 
-Instancia n煤mero 10
+Tiempo de ejecuci髇: 5004.62ms 
+Instancia n鷐ero 10
 Entrada: 
 [[0 0 0 0 5 4 3 0 6]
  [0 0 0 0 0 3 2 7 0]
@@ -210,8 +210,8 @@ Salida:
  [3 8 5 2 6 1 9 4 7]
  [2 4 6 9 3 7 5 1 8]
  [7 9 1 5 4 8 6 3 2]]
-Tiempo de ejecuci贸n: 3776.2ms 
-Instancia n煤mero 11
+Tiempo de ejecuci髇: 1454.48ms 
+Instancia n鷐ero 11
 Entrada: 
 [[0 5 0 0 9 0 0 0 0]
  [0 0 4 8 0 0 0 0 9]
@@ -223,9 +223,17 @@ Entrada:
  [6 0 0 0 0 3 8 0 0]
  [0 0 0 0 1 0 0 6 0]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5007.96ms 
-Instancia n煤mero 12
+[[8 5 7 3 9 2 4 1 6]
+ [2 1 4 8 5 6 3 7 9]
+ [9 3 6 1 4 7 2 8 5]
+ [5 6 8 4 2 9 1 3 7]
+ [4 9 2 7 3 1 6 5 8]
+ [1 7 3 6 8 5 9 4 2]
+ [3 2 1 5 6 8 7 9 4]
+ [6 4 5 9 7 3 8 2 1]
+ [7 8 9 2 1 4 5 6 3]]
+Tiempo de ejecuci髇: 4097.04ms 
+Instancia n鷐ero 12
 Entrada: 
 [[0 0 0 4 0 0 7 0 2]
  [0 6 4 0 0 0 0 5 0]
@@ -246,8 +254,8 @@ Salida:
  [9 4 2 7 1 6 5 3 8]
  [6 8 1 3 4 5 9 2 7]
  [5 3 7 8 9 2 6 1 4]]
-Tiempo de ejecuci贸n: 1981.11ms 
-Instancia n煤mero 13
+Tiempo de ejecuci髇: 1116.08ms 
+Instancia n鷐ero 13
 Entrada: 
 [[1 0 5 0 0 0 3 7 0]
  [0 0 0 0 0 0 2 0 0]
@@ -259,17 +267,9 @@ Entrada:
  [0 0 8 0 0 0 0 0 0]
  [0 1 2 0 0 0 8 0 7]]
 Salida: 
-[[1 2 5 6 4 9 3 7 8]
- [8 3 4 7 1 5 2 9 6]
- [6 9 7 3 8 2 4 1 5]
- [7 4 6 9 5 3 1 8 2]
- [3 5 9 8 2 1 7 6 4]
- [2 8 1 4 7 6 9 5 3]
- [5 7 3 2 9 8 6 4 1]
- [4 6 8 1 3 7 5 2 9]
- [9 1 2 5 6 4 8 3 7]]
-Tiempo de ejecuci贸n: 1749.05ms 
-Instancia n煤mero 14
+Se agoto el tiempo para solucionarlo 
+Tiempo de ejecuci髇: 5016.56ms 
+Instancia n鷐ero 14
 Entrada: 
 [[0 0 1 3 0 0 7 0 2]
  [0 0 6 2 0 0 0 1 0]
@@ -281,9 +281,17 @@ Entrada:
  [0 5 0 0 0 6 4 0 0]
  [9 0 4 0 0 8 5 0 0]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5001.42ms 
-Instancia n煤mero 15
+[[8 4 1 3 6 5 7 9 2]
+ [7 3 6 2 9 4 8 1 5]
+ [5 2 9 1 8 7 6 3 4]
+ [2 8 5 6 7 1 3 4 9]
+ [6 9 7 4 3 2 1 5 8]
+ [4 1 3 8 5 9 2 6 7]
+ [1 7 2 5 4 3 9 8 6]
+ [3 5 8 9 2 6 4 7 1]
+ [9 6 4 7 1 8 5 2 3]]
+Tiempo de ejecuci髇: 3735.44ms 
+Instancia n鷐ero 15
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
  [0 8 0 0 1 0 0 0 0]
@@ -304,8 +312,8 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecuci贸n: 4362.9ms 
-Instancia n煤mero 16
+Tiempo de ejecuci髇: 2896.23ms 
+Instancia n鷐ero 16
 Entrada: 
 [[0 0 8 0 6 0 9 0 0]
  [0 0 0 2 0 3 6 7 8]
@@ -326,8 +334,8 @@ Salida:
  [5 8 7 9 1 2 3 4 6]
  [1 6 2 3 7 4 5 8 9]
  [3 4 9 6 8 5 7 2 1]]
-Tiempo de ejecuci贸n: 1138.27ms 
-Instancia n煤mero 17
+Tiempo de ejecuci髇: 995.37ms 
+Instancia n鷐ero 17
 Entrada: 
 [[3 0 2 0 6 5 0 4 7]
  [0 5 0 0 3 4 1 8 2]
@@ -348,8 +356,8 @@ Salida:
  [4 7 8 3 1 9 6 2 5]
  [5 2 3 6 4 8 7 9 1]
  [9 6 1 2 5 7 8 3 4]]
-Tiempo de ejecuci贸n: 1065.37ms 
-Instancia n煤mero 18
+Tiempo de ejecuci髇: 993.32ms 
+Instancia n鷐ero 18
 Entrada: 
 [[0 7 1 0 3 9 0 0 0]
  [4 6 0 0 7 5 0 1 0]
@@ -370,8 +378,8 @@ Salida:
  [1 2 3 7 5 8 4 6 9]
  [7 9 6 3 4 2 1 8 5]
  [5 8 4 6 9 1 3 2 7]]
-Tiempo de ejecuci贸n: 1360.27ms 
-Instancia n煤mero 19
+Tiempo de ejecuci髇: 976.39ms 
+Instancia n鷐ero 19
 Entrada: 
 [[0 0 0 0 4 0 0 0 9]
  [0 0 0 7 0 0 0 0 0]
@@ -392,8 +400,8 @@ Salida:
  [2 6 7 1 8 9 5 4 3]
  [1 3 8 4 7 5 9 6 2]
  [9 5 4 2 3 6 8 1 7]]
-Tiempo de ejecuci贸n: 1276.35ms 
-Instancia n煤mero 20
+Tiempo de ejecuci髇: 1078.12ms 
+Instancia n鷐ero 20
 Entrada: 
 [[0 0 2 0 0 4 0 0 0]
  [0 0 8 6 0 0 0 0 0]
@@ -414,8 +422,8 @@ Salida:
  [9 3 5 2 4 8 6 1 7]
  [7 8 1 3 5 6 9 4 2]
  [6 2 4 9 7 1 8 5 3]]
-Tiempo de ejecuci贸n: 1633.71ms 
-Instancia n煤mero 21
+Tiempo de ejecuci髇: 1092.42ms 
+Instancia n鷐ero 21
 Entrada: 
 [[6 7 0 0 0 8 0 1 0]
  [0 2 0 0 6 0 0 0 0]
@@ -428,8 +436,8 @@ Entrada:
  [0 0 3 4 0 0 8 0 2]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5017.63ms 
-Instancia n煤mero 22
+Tiempo de ejecuci髇: 5005.61ms 
+Instancia n鷐ero 22
 Entrada: 
 [[0 0 0 0 0 0 0 0 0]
  [1 0 0 0 4 0 0 7 0]
@@ -441,17 +449,9 @@ Entrada:
  [0 0 9 2 0 8 0 0 0]
  [0 0 8 0 3 0 0 0 0]]
 Salida: 
-[[3 8 4 7 2 9 1 5 6]
- [1 2 5 3 4 6 9 7 8]
- [7 9 6 5 8 1 4 2 3]
- [4 1 7 6 9 3 5 8 2]
- [8 6 2 4 1 5 3 9 7]
- [9 5 3 8 7 2 6 1 4]
- [2 3 1 9 6 7 8 4 5]
- [6 4 9 2 5 8 7 3 1]
- [5 7 8 1 3 4 2 6 9]]
-Tiempo de ejecuci贸n: 2622.95ms 
-Instancia n煤mero 23
+Se agoto el tiempo para solucionarlo 
+Tiempo de ejecuci髇: 5003.59ms 
+Instancia n鷐ero 23
 Entrada: 
 [[0 0 7 0 0 1 4 0 0]
  [0 6 0 0 0 0 0 0 0]
@@ -472,8 +472,8 @@ Salida:
  [1 3 2 6 5 7 8 4 9]
  [8 7 4 1 9 2 6 3 5]
  [6 5 9 4 8 3 7 2 1]]
-Tiempo de ejecuci贸n: 1344.97ms 
-Instancia n煤mero 24
+Tiempo de ejecuci髇: 1065.18ms 
+Instancia n鷐ero 24
 Entrada: 
 [[9 0 3 0 0 0 0 2 4]
  [0 0 7 0 9 4 0 0 0]
@@ -485,9 +485,17 @@ Entrada:
  [5 0 0 0 0 0 1 0 0]
  [0 8 0 0 6 0 0 0 0]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5008.02ms 
-Instancia n煤mero 25
+[[9 5 3 7 8 1 6 2 4]
+ [6 2 7 3 9 4 5 1 8]
+ [8 4 1 2 5 6 9 3 7]
+ [3 6 4 5 1 8 2 7 9]
+ [2 9 5 6 3 7 8 4 1]
+ [1 7 8 9 4 2 3 5 6]
+ [4 1 9 8 2 3 7 6 5]
+ [5 3 6 4 7 9 1 8 2]
+ [7 8 2 1 6 5 4 9 3]]
+Tiempo de ejecuci髇: 4326.4ms 
+Instancia n鷐ero 25
 Entrada: 
 [[0 4 0 0 0 0 0 0 0]
  [8 0 6 0 0 0 0 0 7]
@@ -500,8 +508,8 @@ Entrada:
  [0 0 0 0 0 8 0 2 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5094.31ms 
-Instancia n煤mero 26
+Tiempo de ejecuci髇: 5000.52ms 
+Instancia n鷐ero 26
 Entrada: 
 [[0 9 0 3 8 4 0 0 0]
  [0 0 2 0 7 0 0 0 0]
@@ -514,8 +522,8 @@ Entrada:
  [0 0 0 0 0 6 4 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5669.3ms 
-Instancia n煤mero 27
+Tiempo de ejecuci髇: 5012.99ms 
+Instancia n鷐ero 27
 Entrada: 
 [[0 2 7 0 0 0 8 0 0]
  [0 0 1 0 0 0 7 0 0]
@@ -528,8 +536,8 @@ Entrada:
  [0 0 0 0 4 0 0 5 6]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5008.99ms 
-Instancia n煤mero 28
+Tiempo de ejecuci髇: 5001.24ms 
+Instancia n鷐ero 28
 Entrada: 
 [[0 0 2 0 0 0 5 0 0]
  [0 1 0 7 0 5 0 2 0]
@@ -550,8 +558,8 @@ Salida:
  [2 9 5 3 8 6 1 7 4]
  [1 8 4 9 7 2 3 6 5]
  [3 6 7 5 1 4 8 9 2]]
-Tiempo de ejecuci贸n: 996.25ms 
-Instancia n煤mero 29
+Tiempo de ejecuci髇: 1030.25ms 
+Instancia n鷐ero 29
 Entrada: 
 [[0 5 0 0 1 0 0 4 0]
  [1 0 7 0 0 0 6 0 2]
@@ -572,8 +580,8 @@ Salida:
  [7 8 6 4 9 1 2 3 5]
  [3 1 4 2 5 8 7 6 9]
  [5 2 9 3 6 7 8 1 4]]
-Tiempo de ejecuci贸n: 1498.9ms 
-Instancia n煤mero 30
+Tiempo de ejecuci髇: 1019.3ms 
+Instancia n鷐ero 30
 Entrada: 
 [[0 0 0 6 0 2 0 0 0]
  [4 0 0 0 5 0 0 0 1]
@@ -594,8 +602,8 @@ Salida:
  [8 2 6 7 4 1 5 3 9]
  [9 4 1 5 2 3 8 6 7]
  [3 5 7 8 6 9 1 4 2]]
-Tiempo de ejecuci贸n: 1605.67ms 
-Instancia n煤mero 31
+Tiempo de ejecuci髇: 1085.1ms 
+Instancia n鷐ero 31
 Entrada: 
 [[0 0 0 0 0 0 0 0 0]
  [0 7 9 0 5 0 1 8 0]
@@ -607,9 +615,17 @@ Entrada:
  [0 1 6 0 3 0 4 2 0]
  [0 0 0 0 0 0 0 0 0]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 8464.53ms 
-Instancia n煤mero 32
+[[3 4 5 8 7 1 2 6 9]
+ [2 7 9 6 5 3 1 8 4]
+ [8 6 1 4 2 9 5 3 7]
+ [1 9 7 3 4 6 8 5 2]
+ [4 5 2 7 1 8 3 9 6]
+ [6 8 3 5 9 2 7 4 1]
+ [7 3 8 2 6 4 9 1 5]
+ [5 1 6 9 3 7 4 2 8]
+ [9 2 4 1 8 5 6 7 3]]
+Tiempo de ejecuci髇: 1262.62ms 
+Instancia n鷐ero 32
 Entrada: 
 [[7 0 0 0 0 4 0 0 1]
  [0 2 0 0 6 0 0 8 0]
@@ -621,9 +637,17 @@ Entrada:
  [0 9 0 0 1 0 0 6 0]
  [5 0 0 8 0 0 0 0 3]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5005.18ms 
-Instancia n煤mero 33
+[[7 8 5 9 2 4 6 3 1]
+ [9 2 4 1 6 3 5 8 7]
+ [6 3 1 5 7 8 2 4 9]
+ [8 4 3 6 9 2 7 1 5]
+ [1 5 9 3 8 7 4 2 6]
+ [2 7 6 4 5 1 3 9 8]
+ [4 6 8 7 3 9 1 5 2]
+ [3 9 7 2 1 5 8 6 4]
+ [5 1 2 8 4 6 9 7 3]]
+Tiempo de ejecuci髇: 2232.0ms 
+Instancia n鷐ero 33
 Entrada: 
 [[0 0 0 0 0 0 0 8 5]
  [0 0 0 2 1 0 0 0 9]
@@ -644,8 +668,8 @@ Salida:
  [6 1 9 3 7 8 4 5 2]
  [3 2 7 1 5 4 9 6 8]
  [4 8 5 9 6 2 3 7 1]]
-Tiempo de ejecuci贸n: 4542.8ms 
-Instancia n煤mero 34
+Tiempo de ejecuci髇: 1213.73ms 
+Instancia n鷐ero 34
 Entrada: 
 [[0 0 0 0 0 3 0 1 7]
  [0 1 5 0 0 9 0 0 8]
@@ -658,8 +682,8 @@ Entrada:
  [3 4 0 2 0 0 0 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5002.78ms 
-Instancia n煤mero 35
+Tiempo de ejecuci髇: 5007.58ms 
+Instancia n鷐ero 35
 Entrada: 
 [[3 8 0 0 0 0 0 0 0]
  [0 0 0 4 0 0 7 8 5]
@@ -671,9 +695,17 @@ Entrada:
  [4 9 5 0 0 6 0 0 0]
  [0 0 0 0 0 0 0 9 2]]
 Salida: 
-Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5002.45ms 
-Instancia n煤mero 36
+[[3 8 4 5 6 7 9 2 1]
+ [1 2 6 4 3 9 7 8 5]
+ [7 5 9 8 2 1 3 4 6]
+ [5 6 3 7 9 8 2 1 4]
+ [8 4 7 3 1 2 6 5 9]
+ [9 1 2 6 4 5 8 7 3]
+ [2 3 1 9 7 4 5 6 8]
+ [4 9 5 2 8 6 1 3 7]
+ [6 7 8 1 5 3 4 9 2]]
+Tiempo de ejecuci髇: 1594.74ms 
+Instancia n鷐ero 36
 Entrada: 
 [[0 0 0 7 0 0 8 0 0]
  [0 0 6 0 0 0 0 3 1]
@@ -686,8 +718,8 @@ Entrada:
  [0 0 2 0 0 6 0 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5001.92ms 
-Instancia n煤mero 37
+Tiempo de ejecuci髇: 5002.89ms 
+Instancia n鷐ero 37
 Entrada: 
 [[0 0 0 0 5 9 0 2 0]
  [0 9 0 7 4 0 0 0 0]
@@ -708,8 +740,8 @@ Salida:
  [5 8 2 6 9 4 3 1 7]
  [9 3 4 5 1 7 2 8 6]
  [7 6 1 3 8 2 4 9 5]]
-Tiempo de ejecuci贸n: 1005.69ms 
-Instancia n煤mero 38
+Tiempo de ejecuci髇: 1070.15ms 
+Instancia n鷐ero 38
 Entrada: 
 [[9 0 7 5 0 1 8 2 0]
  [0 3 5 0 2 0 0 1 0]
@@ -730,8 +762,8 @@ Salida:
  [3 8 6 4 7 5 1 9 2]
  [7 5 9 2 1 8 6 3 4]
  [4 2 1 9 6 3 7 8 5]]
-Tiempo de ejecuci贸n: 970.32ms 
-Instancia n煤mero 39
+Tiempo de ejecuci髇: 1024.25ms 
+Instancia n鷐ero 39
 Entrada: 
 [[7 0 3 1 0 8 4 5 9]
  [9 0 0 0 6 0 8 0 0]
@@ -752,8 +784,8 @@ Salida:
  [3 4 2 8 7 6 9 1 5]
  [1 8 6 3 5 9 7 2 4]
  [5 9 7 4 1 2 6 8 3]]
-Tiempo de ejecuci贸n: 1095.35ms 
-Instancia n煤mero 40
+Tiempo de ejecuci髇: 1093.09ms 
+Instancia n鷐ero 40
 Entrada: 
 [[0 0 0 0 6 0 0 0 5]
  [6 2 4 0 0 0 0 1 0]
@@ -774,8 +806,8 @@ Salida:
  [3 8 2 4 7 5 1 6 9]
  [7 9 5 3 1 6 8 4 2]
  [1 4 6 8 2 9 7 5 3]]
-Tiempo de ejecuci贸n: 1115.1ms 
-Instancia n煤mero 41
+Tiempo de ejecuci髇: 1233.67ms 
+Instancia n鷐ero 41
 Entrada: 
 [[1 0 0 8 4 3 0 0 0]
  [0 0 8 0 2 7 0 3 1]
@@ -796,8 +828,8 @@ Salida:
  [4 9 1 2 3 8 5 7 6]
  [3 8 5 1 7 6 9 4 2]
  [7 2 6 4 9 5 8 1 3]]
-Tiempo de ejecuci贸n: 2512.05ms 
-Instancia n煤mero 42
+Tiempo de ejecuci髇: 1145.93ms 
+Instancia n鷐ero 42
 Entrada: 
 [[8 0 6 0 0 0 0 5 2]
  [0 9 0 7 4 0 0 0 0]
@@ -818,8 +850,8 @@ Salida:
  [2 3 8 5 9 4 6 7 1]
  [4 1 9 8 7 6 3 2 5]
  [5 6 7 3 2 1 4 9 8]]
-Tiempo de ejecuci贸n: 1267.54ms 
-Instancia n煤mero 43
+Tiempo de ejecuci髇: 1161.89ms 
+Instancia n鷐ero 43
 Entrada: 
 [[0 0 0 8 1 5 4 0 0]
  [1 0 5 0 0 0 0 3 0]
@@ -832,8 +864,8 @@ Entrada:
  [0 0 6 0 0 2 0 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5007.36ms 
-Instancia n煤mero 44
+Tiempo de ejecuci髇: 5002.65ms 
+Instancia n鷐ero 44
 Entrada: 
 [[7 9 0 0 0 0 0 0 3]
  [0 0 0 0 0 0 0 6 0]
@@ -846,8 +878,8 @@ Entrada:
  [0 0 0 0 0 0 0 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5018.4ms 
-Instancia n煤mero 45
+Tiempo de ejecuci髇: 5003.2ms 
+Instancia n鷐ero 45
 Entrada: 
 [[1 0 0 0 0 7 0 9 0]
  [0 3 0 0 2 0 0 0 8]
@@ -860,8 +892,8 @@ Entrada:
  [0 0 7 0 0 0 3 0 0]]
 Salida: 
 Se agoto el tiempo para solucionarlo 
-Tiempo de ejecuci贸n: 5009.15ms 
-Instancia n煤mero 46
+Tiempo de ejecuci髇: 5013.03ms 
+Instancia n鷐ero 46
 Entrada: 
 [[7 9 0 0 0 0 0 0 3]
  [4 0 0 0 0 0 0 6 0]
@@ -873,13 +905,5 @@ Entrada:
  [0 3 0 6 0 5 4 2 1]
  [0 0 0 0 0 0 3 0 0]]
 Salida: 
-[[7 9 2 5 6 8 1 4 3]
- [4 5 3 2 1 9 8 6 7]
- [8 6 1 3 7 4 9 5 2]
- [6 2 5 8 9 3 7 1 4]
- [3 7 9 1 4 2 6 8 5]
- [1 4 8 7 5 6 2 3 9]
- [2 8 4 9 3 1 5 7 6]
- [9 3 7 6 8 5 4 2 1]
- [5 1 6 4 2 7 3 9 8]]
-Tiempo de ejecuci贸n: 4912.43ms 
+Se agoto el tiempo para solucionarlo 
+Tiempo de ejecuci髇: 5010.03ms 
