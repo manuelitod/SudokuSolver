@@ -20,7 +20,7 @@ Salida:
  [3 6 1 4 2 9 7 8 5]
  [5 7 4 1 8 6 2 9 3]
  [9 2 8 3 5 7 4 6 1]]
-Tiempo de ejecución: 12.71ms 
+Tiempo de ejecución: 98.11ms 
 Instancia número 2
 Entrada: 
 [[8 0 2 0 5 0 7 0 1]
@@ -42,7 +42,7 @@ Salida:
  [7 6 1 8 3 4 9 2 5]
  [2 9 5 6 1 7 3 8 4]
  [3 4 8 2 9 5 6 1 7]]
-Tiempo de ejecución: 17.95ms 
+Tiempo de ejecución: 12.33ms 
 Instancia número 3
 Entrada: 
 [[0 0 0 0 0 0 0 0 7]
@@ -64,7 +64,7 @@ Salida:
  [8 3 7 9 5 6 1 2 4]
  [2 6 4 1 8 7 9 5 3]
  [9 5 1 4 3 2 6 7 8]]
-Tiempo de ejecución: 10.97ms 
+Tiempo de ejecución: 11.28ms 
 Instancia número 4
 Entrada: 
 [[2 0 6 0 0 0 0 4 9]
@@ -86,7 +86,7 @@ Salida:
  [9 7 8 2 5 4 6 3 1]
  [5 6 2 3 1 8 4 9 7]
  [4 1 3 9 7 6 2 5 8]]
-Tiempo de ejecución: 16.89ms 
+Tiempo de ejecución: 16.72ms 
 Instancia número 5
 Entrada: 
 [[0 2 5 0 0 7 0 0 4]
@@ -108,7 +108,7 @@ Salida:
  [1 5 3 9 7 8 2 4 6]
  [9 4 2 1 5 6 7 8 3]
  [8 7 6 2 4 3 9 1 5]]
-Tiempo de ejecución: 19.88ms 
+Tiempo de ejecución: 20.06ms 
 Instancia número 6
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
@@ -130,7 +130,7 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecución: 12.49ms 
+Tiempo de ejecución: 16.69ms 
 Instancia número 7
 Entrada: 
 [[0 5 0 2 0 0 0 0 0]
@@ -152,7 +152,7 @@ Salida:
  [5 8 1 6 4 7 9 3 2]
  [4 7 9 5 2 3 8 6 1]
  [2 3 6 8 1 9 4 5 7]]
-Tiempo de ejecución: 12.28ms 
+Tiempo de ejecución: 17.68ms 
 Instancia número 8
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
@@ -174,7 +174,7 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecución: 17.8ms 
+Tiempo de ejecución: 19.79ms 
 Instancia número 9
 Entrada: 
 [[8 0 0 2 0 0 0 4 6]
@@ -196,7 +196,7 @@ Salida:
  [5 3 6 4 1 2 8 7 9]
  [7 1 4 8 9 3 2 6 5]
  [2 8 9 7 5 6 4 1 3]]
-Tiempo de ejecución: 10.32ms 
+Tiempo de ejecución: 15.74ms 
 Instancia número 10
 Entrada: 
 [[0 0 0 0 5 4 3 0 6]
@@ -218,7 +218,7 @@ Salida:
  [3 8 5 2 6 1 9 4 7]
  [2 4 6 9 3 7 5 1 8]
  [7 9 1 5 4 8 6 3 2]]
-Tiempo de ejecución: 9.96ms 
+Tiempo de ejecución: 11.78ms 
 Instancia número 11
 Entrada: 
 [[0 5 0 0 9 0 0 0 0]
@@ -240,7 +240,7 @@ Salida:
  [3 2 1 5 6 8 7 9 4]
  [6 4 5 9 7 3 8 2 1]
  [7 8 9 2 1 4 5 6 3]]
-Tiempo de ejecución: 16.59ms 
+Tiempo de ejecución: 17.97ms 
 Instancia número 12
 Entrada: 
 [[0 0 0 4 0 0 7 0 2]
@@ -262,7 +262,7 @@ Salida:
  [9 4 2 7 1 6 5 3 8]
  [6 8 1 3 4 5 9 2 7]
  [5 3 7 8 9 2 6 1 4]]
-Tiempo de ejecución: 10.57ms 
+Tiempo de ejecución: 14.84ms 
 Instancia número 13
 Entrada: 
 [[1 0 5 0 0 0 3 7 0]
@@ -284,7 +284,7 @@ Salida:
  [5 7 3 2 9 8 6 4 1]
  [4 6 8 1 3 7 5 2 9]
  [9 1 2 5 6 4 8 3 7]]
-Tiempo de ejecución: 21.23ms 
+Tiempo de ejecución: 15.87ms 
 Instancia número 14
 Entrada: 
 [[0 0 1 3 0 0 7 0 2]
@@ -306,7 +306,7 @@ Salida:
  [1 7 2 5 4 3 9 8 6]
  [3 5 8 9 2 6 4 7 1]
  [9 6 4 7 1 8 5 2 3]]
-Tiempo de ejecución: 11.61ms 
+Tiempo de ejecución: 93.33ms 
 Instancia número 15
 Entrada: 
 [[0 0 1 7 2 5 0 0 0]
@@ -328,7 +328,7 @@ Salida:
  [6 4 5 3 7 1 8 2 9]
  [7 3 8 5 9 2 4 6 1]
  [1 9 2 6 4 8 3 7 5]]
-Tiempo de ejecución: 23.4ms 
+Tiempo de ejecución: 87.37ms 
 Instancia número 16
 Entrada: 
 [[0 0 8 0 6 0 9 0 0]
@@ -350,7 +350,7 @@ Salida:
  [5 8 7 9 1 2 3 4 6]
  [1 6 2 3 7 4 5 8 9]
  [3 4 9 6 8 5 7 2 1]]
-Tiempo de ejecución: 9.78ms 
+Tiempo de ejecución: 18.45ms 
 Instancia número 17
 Entrada: 
 [[3 0 2 0 6 5 0 4 7]
@@ -372,7 +372,7 @@ Salida:
  [4 7 8 3 1 9 6 2 5]
  [5 2 3 6 4 8 7 9 1]
  [9 6 1 2 5 7 8 3 4]]
-Tiempo de ejecución: 10.23ms 
+Tiempo de ejecución: 10.4ms 
 Instancia número 18
 Entrada: 
 [[0 7 1 0 3 9 0 0 0]
@@ -394,7 +394,7 @@ Salida:
  [1 2 3 7 5 8 4 6 9]
  [7 9 6 3 4 2 1 8 5]
  [5 8 4 6 9 1 3 2 7]]
-Tiempo de ejecución: 10.17ms 
+Tiempo de ejecución: 10.66ms 
 Instancia número 19
 Entrada: 
 [[0 0 0 0 4 0 0 0 9]
@@ -416,7 +416,7 @@ Salida:
  [2 6 7 1 8 9 5 4 3]
  [1 3 8 4 7 5 9 6 2]
  [9 5 4 2 3 6 8 1 7]]
-Tiempo de ejecución: 10.71ms 
+Tiempo de ejecución: 10.59ms 
 Instancia número 20
 Entrada: 
 [[0 0 2 0 0 4 0 0 0]
@@ -438,7 +438,7 @@ Salida:
  [9 3 5 2 4 8 6 1 7]
  [7 8 1 3 5 6 9 4 2]
  [6 2 4 9 7 1 8 5 3]]
-Tiempo de ejecución: 16.86ms 
+Tiempo de ejecución: 11.32ms 
 Instancia número 21
 Entrada: 
 [[6 7 0 0 0 8 0 1 0]
@@ -460,7 +460,7 @@ Salida:
  [8 1 4 5 2 3 6 9 7]
  [9 5 2 8 7 6 3 4 1]
  [7 6 3 4 1 9 8 5 2]]
-Tiempo de ejecución: 20.31ms 
+Tiempo de ejecución: 18.03ms 
 Instancia número 22
 Entrada: 
 [[0 0 0 0 0 0 0 0 0]
@@ -482,7 +482,7 @@ Salida:
  [2 3 1 9 6 7 8 4 5]
  [6 4 9 2 5 8 7 3 1]
  [5 7 8 1 3 4 2 6 9]]
-Tiempo de ejecución: 12.21ms 
+Tiempo de ejecución: 11.82ms 
 Instancia número 23
 Entrada: 
 [[0 0 7 0 0 1 4 0 0]
@@ -504,7 +504,7 @@ Salida:
  [1 3 2 6 5 7 8 4 9]
  [8 7 4 1 9 2 6 3 5]
  [6 5 9 4 8 3 7 2 1]]
-Tiempo de ejecución: 25.85ms 
+Tiempo de ejecución: 18.31ms 
 Instancia número 24
 Entrada: 
 [[9 0 3 0 0 0 0 2 4]
@@ -526,7 +526,7 @@ Salida:
  [4 1 9 8 2 3 7 6 5]
  [5 3 6 4 7 9 1 8 2]
  [7 8 2 1 6 5 4 9 3]]
-Tiempo de ejecución: 11.08ms 
+Tiempo de ejecución: 13.11ms 
 Instancia número 25
 Entrada: 
 [[0 4 0 0 0 0 0 0 0]
@@ -548,7 +548,7 @@ Salida:
  [7 5 8 9 1 2 4 3 6]
  [4 9 2 6 7 3 8 1 5]
  [6 3 1 5 4 8 7 2 9]]
-Tiempo de ejecución: 89.02ms 
+Tiempo de ejecución: 13.93ms 
 Instancia número 26
 Entrada: 
 [[0 9 0 3 8 4 0 0 0]
@@ -570,7 +570,7 @@ Salida:
  [3 1 5 8 4 7 6 2 9]
  [7 4 6 5 2 9 1 8 3]
  [9 2 8 1 3 6 4 5 7]]
-Tiempo de ejecución: 19.41ms 
+Tiempo de ejecución: 12.02ms 
 Instancia número 27
 Entrada: 
 [[0 2 7 0 0 0 8 0 0]
@@ -592,7 +592,7 @@ Salida:
  [4 9 3 5 6 7 2 1 8]
  [5 8 6 2 9 1 4 3 7]
  [7 1 2 8 4 3 9 5 6]]
-Tiempo de ejecución: 19.15ms 
+Tiempo de ejecución: 10.55ms 
 Instancia número 28
 Entrada: 
 [[0 0 2 0 0 0 5 0 0]
@@ -614,7 +614,7 @@ Salida:
  [2 9 5 3 8 6 1 7 4]
  [1 8 4 9 7 2 3 6 5]
  [3 6 7 5 1 4 8 9 2]]
-Tiempo de ejecución: 16.63ms 
+Tiempo de ejecución: 10.04ms 
 Instancia número 29
 Entrada: 
 [[0 5 0 0 1 0 0 4 0]
@@ -636,7 +636,7 @@ Salida:
  [7 8 6 4 9 1 2 3 5]
  [3 1 4 2 5 8 7 6 9]
  [5 2 9 3 6 7 8 1 4]]
-Tiempo de ejecución: 14.07ms 
+Tiempo de ejecución: 16.64ms 
 Instancia número 30
 Entrada: 
 [[0 0 0 6 0 2 0 0 0]
@@ -658,7 +658,7 @@ Salida:
  [8 2 6 7 4 1 5 3 9]
  [9 4 1 5 2 3 8 6 7]
  [3 5 7 8 6 9 1 4 2]]
-Tiempo de ejecución: 24.82ms 
+Tiempo de ejecución: 11.72ms 
 Instancia número 31
 Entrada: 
 [[0 0 0 0 0 0 0 0 0]
@@ -680,7 +680,7 @@ Salida:
  [7 3 8 2 6 4 9 1 5]
  [5 1 6 9 3 7 4 2 8]
  [9 2 4 1 8 5 6 7 3]]
-Tiempo de ejecución: 19.41ms 
+Tiempo de ejecución: 11.43ms 
 Instancia número 32
 Entrada: 
 [[7 0 0 0 0 4 0 0 1]
@@ -702,7 +702,7 @@ Salida:
  [4 6 8 7 3 9 1 5 2]
  [3 9 7 2 1 5 8 6 4]
  [5 1 2 8 4 6 9 7 3]]
-Tiempo de ejecución: 67.01ms 
+Tiempo de ejecución: 10.55ms 
 Instancia número 33
 Entrada: 
 [[0 0 0 0 0 0 0 8 5]
@@ -724,7 +724,7 @@ Salida:
  [6 1 9 3 7 8 4 5 2]
  [3 2 7 1 5 4 9 6 8]
  [4 8 5 9 6 2 3 7 1]]
-Tiempo de ejecución: 17.94ms 
+Tiempo de ejecución: 10.11ms 
 Instancia número 34
 Entrada: 
 [[0 0 0 0 0 3 0 1 7]
@@ -746,7 +746,7 @@ Salida:
  [9 8 6 1 3 4 7 2 5]
  [5 2 1 6 7 8 3 4 9]
  [3 4 7 2 9 5 1 8 6]]
-Tiempo de ejecución: 24.72ms 
+Tiempo de ejecución: 13.66ms 
 Instancia número 35
 Entrada: 
 [[3 8 0 0 0 0 0 0 0]
@@ -768,7 +768,7 @@ Salida:
  [2 3 1 9 7 4 5 6 8]
  [4 9 5 2 8 6 1 3 7]
  [6 7 8 1 5 3 4 9 2]]
-Tiempo de ejecución: 19.77ms 
+Tiempo de ejecución: 11.8ms 
 Instancia número 36
 Entrada: 
 [[0 0 0 7 0 0 8 0 0]
@@ -790,7 +790,7 @@ Salida:
  [4 3 5 8 2 1 9 7 6]
  [8 6 1 4 9 7 5 2 3]
  [7 9 2 3 5 6 1 4 8]]
-Tiempo de ejecución: 26.46ms 
+Tiempo de ejecución: 26.79ms 
 Instancia número 37
 Entrada: 
 [[0 0 0 0 5 9 0 2 0]
@@ -812,7 +812,7 @@ Salida:
  [5 8 2 6 9 4 3 1 7]
  [9 3 4 5 1 7 2 8 6]
  [7 6 1 3 8 2 4 9 5]]
-Tiempo de ejecución: 16.73ms 
+Tiempo de ejecución: 19.17ms 
 Instancia número 38
 Entrada: 
 [[9 0 7 5 0 1 8 2 0]
@@ -834,7 +834,7 @@ Salida:
  [3 8 6 4 7 5 1 9 2]
  [7 5 9 2 1 8 6 3 4]
  [4 2 1 9 6 3 7 8 5]]
-Tiempo de ejecución: 15.48ms 
+Tiempo de ejecución: 18.64ms 
 Instancia número 39
 Entrada: 
 [[7 0 3 1 0 8 4 5 9]
@@ -856,7 +856,7 @@ Salida:
  [3 4 2 8 7 6 9 1 5]
  [1 8 6 3 5 9 7 2 4]
  [5 9 7 4 1 2 6 8 3]]
-Tiempo de ejecución: 72.16ms 
+Tiempo de ejecución: 18.59ms 
 Instancia número 40
 Entrada: 
 [[0 0 0 0 6 0 0 0 5]
@@ -878,7 +878,7 @@ Salida:
  [3 8 2 4 7 5 1 6 9]
  [7 9 5 3 1 6 8 4 2]
  [1 4 6 8 2 9 7 5 3]]
-Tiempo de ejecución: 15.24ms 
+Tiempo de ejecución: 17.22ms 
 Instancia número 41
 Entrada: 
 [[1 0 0 8 4 3 0 0 0]
@@ -900,7 +900,7 @@ Salida:
  [4 9 1 2 3 8 5 7 6]
  [3 8 5 1 7 6 9 4 2]
  [7 2 6 4 9 5 8 1 3]]
-Tiempo de ejecución: 25.71ms 
+Tiempo de ejecución: 13.19ms 
 Instancia número 42
 Entrada: 
 [[8 0 6 0 0 0 0 5 2]
@@ -922,7 +922,7 @@ Salida:
  [2 3 8 5 9 4 6 7 1]
  [4 1 9 8 7 6 3 2 5]
  [5 6 7 3 2 1 4 9 8]]
-Tiempo de ejecución: 91.51ms 
+Tiempo de ejecución: 11.83ms 
 Instancia número 43
 Entrada: 
 [[0 0 0 8 1 5 4 0 0]
@@ -944,7 +944,7 @@ Salida:
  [5 2 1 9 8 7 6 4 3]
  [8 3 4 1 5 6 2 9 7]
  [7 9 6 3 4 2 1 5 8]]
-Tiempo de ejecución: 72.9ms 
+Tiempo de ejecución: 11.72ms 
 Instancia número 44
 Entrada: 
 [[7 9 0 0 0 0 0 0 3]
@@ -966,7 +966,7 @@ Salida:
  [2 8 4 9 3 1 5 7 6]
  [9 3 7 6 8 5 4 2 1]
  [5 1 6 4 2 7 3 9 8]]
-Tiempo de ejecución: 20.24ms 
+Tiempo de ejecución: 11.98ms 
 Instancia número 45
 Entrada: 
 [[1 0 0 0 0 7 0 9 0]
@@ -988,7 +988,7 @@ Salida:
  [3 5 6 4 7 8 2 1 9]
  [2 4 1 9 3 5 8 6 7]
  [8 9 7 2 6 1 3 5 4]]
-Tiempo de ejecución: 40.68ms 
+Tiempo de ejecución: 42.16ms 
 Instancia número 46
 Entrada: 
 [[7 9 0 0 0 0 0 0 3]
@@ -1010,4 +1010,4 @@ Salida:
  [2 8 4 9 3 1 5 7 6]
  [9 3 7 6 8 5 4 2 1]
  [5 1 6 4 2 7 3 9 8]]
-Tiempo de ejecución: 19.31ms 
+Tiempo de ejecución: 98.86ms 

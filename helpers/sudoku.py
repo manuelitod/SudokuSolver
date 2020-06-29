@@ -71,10 +71,14 @@ def get_sudoku_from_sat(sol_filename, translator, is_zchaff=False):
 
 
 # Método que escribe el fichero que contiene la solución del sudoku.
+# checkeando si la solución es válida.
 def write_sudoku_sol(sudoku, solution, filename, counter, is_zchaff=False):
 
     fd = open('../scripts/SatSols/' + filename, 'a')
     fd_times = open('../scripts/SatOutputTimes/' + filename, 'a')
+    sudoku_solution = []
+    is_sudoku_valid = False
+
     if is_zchaff:
         fd_report = open('../scripts/Reports/' + filename, 'a')
         if counter == 0:
@@ -83,7 +87,15 @@ def write_sudoku_sol(sudoku, solution, filename, counter, is_zchaff=False):
         fd_report = open('../scripts/Reports/' + filename, 'a')
         if counter == 0:
             fd_report.write("Reporte de ejecución de implementación SAT propia \n")
-    fd.write(solution[0] + '\n')
+    
+    if solution[2] == 1:
+        sudoku_solution = create_sudoku_instance(solution[0])
+        is_sudoku_valid = sudoku_solution.check_solution()
+        if is_sudoku_valid:
+            fd.write(solution[0] + '\n')
+        else:
+            fd.write("Solución inválida \n")
+
     fd_times.write(str(solution[1]) + '\n')
 
     # Generamos el informe
@@ -96,7 +108,11 @@ def write_sudoku_sol(sudoku, solution, filename, counter, is_zchaff=False):
     elif solution[2] == 0:
         fd_report.write("No tiene solución \n")
     else:
-        create_sudoku_instance(solution[0]).print(fd_report)
+        if is_sudoku_valid:
+            sudoku_solution.print(fd_report)
+        else:
+            fd_report.write("Solución inválida \n")
+
     fd_report.write("Tiempo de ejecución: " + str(solution[1]) + 'ms \n')
 
     fd.close()
