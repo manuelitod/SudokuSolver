@@ -81,6 +81,18 @@ class Sat:
                 return preposition, assignment
             unit_clauses = [c for c in preposition if len(c) == 1]
         return preposition, assignment
+    
+    def shortest_positive_clause(self, preposition):
+        min_len = float("inf")
+        best_literal = 0
+        for clause in preposition:
+            negatives = sum(1 for literal in clause if literal < 0)
+            if not negatives and len(clause) < min_len:
+                best_literal = clause[0]
+                min_len = len(clause)
+        if not best_literal:
+            return preposition[0][0]
+        return best_literal
 
     # Método que selecciona de forma aleatoria un literal presente en la preposición.
     def random_variable_selection(self, preposition):
@@ -109,7 +121,7 @@ class Sat:
             self.solution = assignment
             return assignment
 
-        variable = self.random_variable_selection(preposition)
+        variable = self.shortest_positive_clause(preposition)
         solution = self.solve(self.reduce_preposition(preposition, variable), assignment + [variable])
         if not solution:
             solution = self.solve(self.reduce_preposition(preposition, -variable), assignment + [-variable])
