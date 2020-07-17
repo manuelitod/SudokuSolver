@@ -171,6 +171,13 @@ Este metodo genera todas las clausulas de unicidad del sudoku. Para ello por cad
 
 Este metodo generara todas las clausulas de validez del sudoku. Por cada fila, columna y sección del sudoku se obtienen los literales de cada uno de ellos y se utiliza el método gen_not_prep para generar las clausulas de validez. La complejidad es O(n + n + n^2 + n^2) = O(n^2), siendo n la dimensión del sudoku
 
+## Mejoras en la versión 2.0
+
+Para la segunda versión del resolvedor de sudokus, se enfatizó en mejoras que ayuden a disminuir el tiempo de resolución. Las mejoras empleadas fueron las siguientes: 
+
+- Propagación unitaria: Ya implementada en la versión anterior y explicado en el apartado del Método Solve. 
+- Shortest Positive Clause (cláusula positiva más corta): Esto hace referencia al empleo de una heurística con la cual en lugar de elegir de forma aleatoria el literal al que se le asigna un valor, como es el caso de la verión anterior, se procede a buscar dentro de la lista de cláusulas aquella que contenga la menor cantidad de literales y que todos ellos sean positivos. Una vez conseguida dicha cláusula, procedemos a asignar el valor al literal en la primera posición de la misma. Su complejidad es O(n), donde n es la cantidad de clausulas.
+
 ## Notas:
 
 - El tiempo máximo utilizado es de 5 segundos, o 5000 milisegundos.
